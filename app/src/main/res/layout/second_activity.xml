@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#04001A"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/txtBemVindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="Cálculo da Média"
+        android:textColor="#FF9500"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNota1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textColorHint="#1e88e5"
+        android:hint="Nota 1"
+        android:backgroundTint="#004999"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/txtBemVindo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/edtNota2"
+        android:layout_width="0dp"
+        android:textColorHint="#1e88e5"
+        android:layout_height="50dp"
+        android:backgroundTint="#004999"
+        android:hint="Nota 2"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/edtNota1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/edtNota3"
+        android:layout_width="0dp"
+        android:textColorHint="#1e88e5"
+        android:backgroundTint="#004999"
+        android:layout_height="50dp"
+        android:hint="Nota 3"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/edtNota2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/edtNota4"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textColorHint="#1e88e5"
+        android:backgroundTint="#004999"
+        android:hint="Nota 4"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/edtNota3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="165dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FF9500"
+        android:text="Calcular"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtNota4" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Média Final: "
+        android:textSize="18sp"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/btnCalcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+
+    <TextView
+        android:id="@+id/txtAprovadoReprovado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Aprovado ou Reprovado: "
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCalcular" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="141dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="#FF9500"
+        android:text="Voltar"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtResultado" />
+</androidx.constraintlayout.widget.ConstraintLayout>
