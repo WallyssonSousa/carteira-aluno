@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#04001A"
     tools:context=".MainActivity">
+
+    <!-- para empilhar elementos -->
+    <FrameLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circular_shape" />
+
+        <TextView
+            android:id="@+id/txtUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="W"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textStyle="bold"/>
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/txtFaculdade2"
@@ -40,12 +66,61 @@
         android:id="@+id/btnMedia"
         android:layout_width="121dp"
         android:layout_height="67dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="284dp"
         android:backgroundTint="#FF9500"
         android:text="Média"
         android:textColor="@android:color/white"
+        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.775"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtFaculdade" />
+
+    <Button
+        android:id="@+id/btnAulas"
+        android:layout_width="121dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="284dp"
+        android:backgroundTint="#FF9500"
+        android:text="Aulas"
+        android:textColor="@android:color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFaculdade" />
+
+    <Button
+        android:id="@+id/btnCarteirinha"
+        android:layout_width="121dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="380dp"
+        android:backgroundTint="#FF9500"
+        android:text="Carteirinha"
+        android:textColor="@android:color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFaculdade" />
+
+    <Button
+        android:id="@+id/btnFinanceiro"
+        android:layout_width="121dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="380dp"
+        android:backgroundTint="#FF9500"
+        android:text="Financeiro"
+        android:textColor="@android:color/white"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFaculdade" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
