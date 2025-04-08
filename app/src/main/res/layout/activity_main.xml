@@ -8,9 +8,19 @@
     tools:context=".MainActivity">
 
     <!-- para empilhar elementos -->
+
+    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:background="@drawable/img_tela_principal"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/grade2" />
+
+
     <FrameLayout
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/frameUser"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -18,30 +28,23 @@
 
         <ImageView
             android:id="@+id/imgUser"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/circular_shape" />
-
-        <TextView
-            android:id="@+id/txtUser"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="W"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:textSize="30dp"
-            android:textStyle="bold"/>
-
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/img_user"
+            android:backgroundTint="#04001A"/>
     </FrameLayout>
 
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@drawable/img/img_logo_impacta.png"/>-->
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="110dp"
+        android:background="@drawable/img_logo_impacta"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/frameUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
-
-    <TextView
+    <!--<TextView
         android:id="@+id/txtFaculdade2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,27 +56,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtFaculdade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
-        android:text="Faculdade Impacta"
-        android:textColor="#004999"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
     <Button
         android:id="@+id/btnMedia"
         android:layout_width="150dp"
         android:layout_height="80dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginBottom="172dp"
         android:backgroundTint="#FF9500"
         android:text="Média"
         android:textColor="@android:color/white"
@@ -82,13 +71,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtFaculdade" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <Button
         android:id="@+id/btnAulas"
         android:layout_width="150dp"
         android:layout_height="80dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginBottom="172dp"
         android:backgroundTint="#FF9500"
         android:text="Aulas"
         android:textColor="@android:color/white"
@@ -97,13 +86,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtFaculdade" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <Button
         android:id="@+id/btnCarteirinha"
         android:layout_width="150dp"
         android:layout_height="80dp"
-        android:layout_marginTop="392dp"
+        android:layout_marginBottom="66dp"
         android:backgroundTint="#FF9500"
         android:text="Carteirinha"
         android:textColor="@android:color/white"
@@ -111,13 +100,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtFaculdade" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
         android:id="@+id/btnFinanceiro"
         android:layout_width="150dp"
         android:layout_height="80dp"
-        android:layout_marginTop="392dp"
+        android:layout_marginBottom="66dp"
         android:backgroundTint="#FF9500"
         android:text="Financeiro"
         android:textColor="@android:color/white"
@@ -125,7 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtFaculdade" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <!--1--><TextView
         android:layout_width="230dp"
@@ -139,6 +128,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
     <!--2--><TextView
+        android:id="@+id/grade2"
         android:layout_width="230dp"
         android:layout_height="110dp"
         android:layout_marginBottom="160dp"
@@ -187,6 +177,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
     <!--6--><TextView
+        android:id="@+id/grade6"
         android:layout_width="230dp"
         android:layout_height="110dp"
         android:layout_marginBottom="160dp"

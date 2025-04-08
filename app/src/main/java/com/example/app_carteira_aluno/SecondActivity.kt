@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.second_activity)
 
