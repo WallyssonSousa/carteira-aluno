@@ -9,38 +9,54 @@
     tools:context=".SecondActivity">
 
     <ImageView
+        android:id="@+id/imgV_secondView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="350dp"
         android:background="@drawable/img_tela_media"
-        app:layout_constraintBottom_toBottomOf="@+id/edtNota1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/edtNota1" />
 
 
-    <TextView
-        android:id="@+id/txtResultado"
-        android:layout_width="176dp"
-        android:layout_height="40dp"
-        android:text="Média Final: "
-        android:textColor="#fff"
-        android:textSize="28sp"
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtResultado"-->
+<!--        android:layout_width="176dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:text="Média Final: "-->
+<!--        android:textColor="#fff"-->
+<!--        android:textSize="28sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnSalvar"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteY="140dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtAprovadoReprovado"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Aprovado ou Reprovado: "-->
+<!--        android:textColor="#fff"-->
+<!--        android:textSize="26sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtResultado"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteY="208dp" />-->
+
+    <EditText
+        android:id="@+id/edtDisciplina"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="14dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittext_ios_style"
+        android:hint="Qual é a disciplina das notas ?"
+        android:inputType="text"
+        android:padding="14dp"
+        android:textColorHint="#1A237E"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="140dp" />
-
-    <TextView
-        android:id="@+id/txtAprovadoReprovado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aprovado ou Reprovado: "
-        android:textColor="#fff"
-        android:textSize="26sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="208dp" />
+        app:layout_constraintBottom_toTopOf="@id/edtNota1"/>
 
     <EditText
         android:id="@+id/edtNota2"
@@ -54,7 +70,6 @@
         android:padding="14dp"
         android:textColorHint="#1A237E"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtNota1" />
 
@@ -68,24 +83,37 @@
         android:inputType="numberDecimal"
         android:padding="14dp"
         android:textColorHint="#1A237E"
+        android:layout_marginTop="400dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="284dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imgV_secondView"/>
 
     <Button
-        android:id="@+id/btnCalcular"
+        android:id="@+id/btnSalvar"
         android:layout_width="165dp"
         android:layout_height="56dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#2196F3"
-        android:text="Calcular"
+        android:text="Salvar"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtNota4" />
+
+    <Button
+        android:id="@+id/btnListarDisc"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#2196F3"
+        android:text="Ver Disciplinas"
+        android:textSize="18dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSalvar" />
+
 
     <EditText
         android:id="@+id/edtNota3"

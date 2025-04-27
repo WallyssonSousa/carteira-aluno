@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#04001A"
+    tools:context=".DisciplinaDetailsActivity">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Nome da Disciplina -->
+        <TextView
+            android:id="@+id/txtDisciplinaNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disciplina:"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp"/>
+
+        <!-- Notas da Disciplina -->
+        <TextView
+            android:id="@+id/txtNotas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notas:"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp"/>
+
+        <!-- Status de Aprovação -->
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/btnExcluir"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:backgroundTint="#FF9500"
+            android:layout_marginTop="300dp"
+            android:text="Excluir Disciplina"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="93dp"
+        android:layout_height="54dp"
+        android:backgroundTint="#2196F3"
+        android:text="Voltar"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
